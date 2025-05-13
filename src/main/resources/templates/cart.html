@@ -1,0 +1,61 @@
+<!-- templates/cart/cartList.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>장바구니</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/">🛍️ LocalShop</a>
+    <div class="d-flex ms-auto">
+      <div th:if="${session.loginUser == null}">
+        <a href="/login" class="btn btn-outline-primary me-2">로그인</a>
+        <a href="/signup" class="btn btn-primary">회원가입</a>
+      </div>
+      <div th:if="${session.loginUser != null}">
+        <span class="me-3 align-self-center" th:text="'👤 ' + ${session.loginUser.name} + '님'"></span>
+        <a href="/cart" class="btn btn-outline-success me-2">장바구니</a>
+        <a href="/orders/history" class="btn btn-outline-secondary me-2">결제내역</a>
+        <a href="/logout" class="btn btn-outline-danger">로그아웃</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container mt-5">
+  <h2>장바구니</h2>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>상품명</th>
+      <th>가격</th>
+      <th>수량</th>
+      <th>합계</th>
+      <th>삭제</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cartItem : ${cartItems}">
+      <td th:text="${cartItem.item.name}">상품명</td>
+      <td th:text="${cartItem.item.price}">가격</td>
+      <td th:text="${cartItem.quantity}">수량</td>
+      <td th:text="${cartItem.item.price * cartItem.quantity}">합계</td>
+      <td>
+        <form th:action="@{/cart/remove}" method="post">
+          <input type="hidden" name="cartItemId" th:value="${cartItem.id}">
+          <button type="submit" class="btn btn-sm btn-danger">삭제</button>
+        </form>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="text-end">
+    <form th:action="@{/order}" method="post">
+      <button type="submit" class="btn btn-success">주문하기</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

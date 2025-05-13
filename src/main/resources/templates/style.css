@@ -1,0 +1,4 @@
+.nav-link-hover:hover {
+    text-decoration: underline;
+    color: #198754; /* 부트스트랩 그린 */
+}

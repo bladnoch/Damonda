@@ -1,0 +1,50 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+.uploads/
+/uploads
+/uploads
+uploads/44f19246-5bdb-45e7-9041-5345b2fa0795_33311944676573-9b903761-2ab4-410a-8d0d-2669380af2bb.jpg
+uploads/27def676-77f7-433c-a5d0-cf49b1cc0063_676d7d19-7938-41f9-896f-b7f9545b2710.jpg
+uploads/44f19246-5bdb-45e7-9041-5345b2fa0795_33311944676573-9b903761-2ab4-410a-8d0d-2669380af2bb.jpg
+uploads/4f2cf1b6-143c-43f4-9e6c-ae7d1e29a59c_blue.jpg
+uploads/5514af72-d6c6-499b-b710-d87f8490ad8c_im.png
+uploads/590a3a8e-6096-45dc-90f8-b7915621f84d_bedeff35-a96e-4d92-9b13-a723009938b7.jpg
+uploads/65dc752f-8f90-429b-9311-dd4586c83f23_43381609862793-ea049654-e2ad-4f51-aa32-4d8ff3db53a2.jpg
+uploads/85855fca-4efe-4abc-bd1b-649717674f2c_2215512493945149-f801fa53-33fd-482b-abcf-20dda5817093.jpg
+uploads/c774e92f-d85c-4e7c-ad80-0c793e944da8_676d7d19-7938-41f9-896f-b7f9545b2710.jpg
+uploads/cb184776-654e-4ded-af79-c6afac6b4b45_스크린샷 2025-05-12 오전 12.34.13.png
